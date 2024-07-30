@@ -1,0 +1,9 @@
+site_name: "Internships Service"
+site_description: "A microservice for internships"
+
+nav:
+  - Introduction: index.md
+  - Help: help.md
+
+plugins:
+  - techdocs-core

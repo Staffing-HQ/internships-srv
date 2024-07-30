@@ -1,0 +1,36 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: internships-srv
+  title: Internships Service
+  description: A microservice for internships
+  annotations:
+    github.com/project-slug: Staffing-HQ/internships-srv
+    backstage.io/techdocs-ref: dir:.
+    gocd.org/pipelines: backstage,backstage-pr,backstage-builder
+    sonarqube.org/project-key: default/internships-srv
+  tags:
+    - spring-boot
+    - java
+    - maven
+spec:
+  type: service
+  owner: group:default/hr
+  lifecycle: experimental
+  system: internships-system
+  providesApis:
+    - internships-srv-api
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: internships-srv-api
+  title: Internships Service API
+  description: REST API for the Internships Service
+spec:
+  type: openapi
+  lifecycle: experimental
+  owner: group:default/hr
+  system: internships-system
+  definition:
+    $text: ./openapi.yaml
