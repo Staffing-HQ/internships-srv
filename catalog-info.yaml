@@ -8,7 +8,7 @@ metadata:
     github.com/project-slug: Staffing-HQ/internships-srv
     backstage.io/techdocs-ref: dir:.
     gocd.org/pipelines: backstage,backstage-pr,backstage-builder
-    sonarqube.org/project-key: default/internships-srv
+    sonarqube.org/project-key: Staffing-HQ_internships-srv
   tags:
     - spring-boot
     - java
